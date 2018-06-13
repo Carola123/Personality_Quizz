@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<HTML>
+
+<head>
+  <title>Quizz</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/start.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <section id="start">
+      <div class="row">
+        <div class="col-md-6">
+          <h1>ARE YOU A
+            <br /> GOOD FRIEND?</h1>
+          <p>Mark everything you would do as a friend.</p>
+          <div>
+            <input id="buttonStart" type="button" value="LET'S PLAY!" onclick="QuizzGame.start();">
+            <div id="board"></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img id="boyStartImage" class="image" src="./image/start.jpg" />
+        </div>
+      </div>
+    </section>
+  </div>
+  <div id="quizz" style="display: none">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <form name="quiz">
+            <h3>1. If your friend invites you to watch a movie with the actor you hate, what would you do?</h3>
+            <br />
+            <input type="radio" name="q1" onclick="saver(1,1)">1. Are you going to watch the movie and complain until it's over;
+            <br>
+            <input type="radio" name="q1" onclick="saver(1,2)">2. Are you going to watch the movie and wake up in the end;
+            <br>
+            <input type="radio" name="q1" onclick="saver(1,15)">3. Do you pretend that you enjoy the movie;
+            <br>
+            <input type="radio" name="q1" onclick="saver(1,1)">4. You are not going to see the movie and you decide to go out with other friends;
+            <br>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <img class="image" src="./image/Question1.jpg" />
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <form name="quiz">
+            <h3>2. If your friend is sad, what would you do?</h3>
+            <br />
+            <input type="radio" name="q2" onclick="saver(2,4)">1. You do what you can to get a smile from him;
+            <br>
+            <input type="radio" name="q2" onclick="saver(2,2)">2. You walk away and come back when he feels better;
+            <br>
+            <input type="radio" name="q2" onclick="saver(2,4)">3. You accompany him in silence;
+            <br>
+            <input type="radio" name="q2" onclick="saver(2,10)">4. You listen to him and give him advices;
+            <br>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <img class="image" src="./image/Question2.jpg" />
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <form name="quiz">
+            <h3>3. Who have priority in your life?</h3>
+            <br />
+            <input type="radio" name="q3" onclick="saver(3,8)">1. My family, my friends and my dog;
+            <br>
+            <input type="radio" name="q3" onclick="saver(3,1)">2. First me and then the others;
+            <br>
+            <input type="radio" name="q3" onclick="saver(3,1)">3. Television and my work;
+            <br>
+            <input type="radio" name="q3" onclick="saver(3,10)">4. I try to maintain a balance between family, friends, dog, work and hobbies.;
+            <br>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <img class="image" src="./image/Question3.jpg" />
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <form name="quiz">
+            <h3>4. You are walking with your friend and he stumbles ... what would you do?</h3>
+            <br />
+            <input type="radio" name="q4" onclick="saver(4,4)">1. You laugh without stopping
+            <br>
+            <input type="radio" name="q4" onclick="saver(4,4)">2. You laugh but you quickly help him
+            <br>
+            <input type="radio" name="q4" onclick="saver(4,2)">3. You do not know
+            <br>
+            <input type="radio" name="q4" onclick="saver(4,10)">4. You would never laugh at him, you would help him quickly
+            <br>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <img class="image" src="./image/Question4.jpg" />
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <form name="quiz">
+            <h3>5. You are eating your favorite chocolate and suddenly you meet your friend...he wants you give him a little
+              of what you're eating... what would you do?</h3>
+            <br />
+            <input type="radio" name="q5" onclick="saver(5,10)">1. You give half
+            <br>
+            <input type="radio" name="q5" onclick="saver(5,3)">2. You say no, I'm sorry but it's mine
+            <br>
+            <input type="radio" name="q5" onclick="saver(5,4)">3. You explain that it's your favorite chocolate and that you only have one
+            <br>
+            <input type="radio" name="q5" onclick="saver(5,3)">4. You tell him he needs to do diet and he should not eat chocolate
+            <br>
+            <br>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <img class="image" src="./image/Question5.jpg" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p style="text-align: center" ;>
+            <input class="button" type="submit" name="result" value="See the result!" onclick="total()">
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/quizz.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</HTML>

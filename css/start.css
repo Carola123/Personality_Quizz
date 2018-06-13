@@ -1,0 +1,52 @@
+#buttonStart{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	list-style: none;
+	display: inline-block;
+	width: 400px;
+	height: 60px;
+	padding: 15px;
+	border:1px solid lightblue;
+	border-radius: 10px;
+	text-align: center;
+	background-color: lightblue;
+	font-family: arial black;
+	font-size: 18px;
+	color:black;
+	opacity: 0.8;
+}
+
+#buttonStart:hover{
+	background-color: white;
+}
+
+#start a {
+	color: #337ab7;
+	text-decoration: none;
+}
+#start h1 {
+	font-family: calibri light;
+	font-size: 60px;
+	font-style: normal;
+	font-weight: 200;
+	letter-spacing: 10px;
+	line-height: 80px;
+	margin: 0;
+	font-weight:400;
+	font-style:normal;
+}
+#start p {
+	font-family: Calibri Light;
+	font-size:16px;
+	font-style:normal;
+	font-weight: 400;
+	letter-spacing: 3.2px;
+	line-height: 30px;
+}
+#boyStartImage {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height:auto;
+	width: auto;
+}
